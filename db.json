@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "name": "Horace Renner",
+      "id": 1
+    },
+    {
+      "name": "Mrs. Carole Marquardt PhD",
+      "id": 2
+    }
+  ],
+  "albums": [
+    {
+      "userId": 2,
+      "title": "Rustic Soft Ball",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "title": "Handcrafted Rubber Salad",
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "title": "Rustic Steel Towels",
+      "id": 12
+    }
+  ],
+  "photos": []
+}
