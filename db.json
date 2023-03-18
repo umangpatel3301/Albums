@@ -1,5 +1,21 @@
 {
-  "users": [],
-  "albums": [],
+  "users": [
+    {
+      "name": "Harry McKenzie",
+      "id": 1
+    }
+  ],
+  "albums": [
+    {
+      "userId": 1,
+      "title": "Luxurious Granite Chips",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "title": "Modern Concrete Fish",
+      "id": 2
+    }
+  ],
   "photos": []
 }

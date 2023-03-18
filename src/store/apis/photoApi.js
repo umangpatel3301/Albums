@@ -10,12 +10,11 @@ const photoApi = createApi({
     return {
       fetchPhoto: builder.query({
         providesTags: (result, error, album) => {
-          return [
-            {
-              type: "photo",
-              id: album.id,
-            },
-          ];
+          const tag = result.map((photo) => {
+            return { type: "photo", id: photo.id };
+          });
+          tag.push({ type: "AlbumPhoto", id: album.id });
+          return tag;
         },
         query: (album) => {
           return {
@@ -31,7 +30,7 @@ const photoApi = createApi({
         invalidatesTags: (result, error, album) => {
           return [
             {
-              type: "photo",
+              type: "AlbumPhoto",
               id: album.id,
             },
           ];
@@ -53,7 +52,7 @@ const photoApi = createApi({
           return [
             {
               type: "photo",
-              id: photo.albumId,
+              id: photo.id,
             },
           ];
         },
